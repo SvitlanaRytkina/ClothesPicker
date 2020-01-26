@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="313.0" prefWidth="456.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.frontend.FXMLMainSceneController">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="450.0" prefWidth="608.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="14.0" prefHeight="42.0" prefWidth="347.0" text="Look for the day" textAlignment="CENTER">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="48.0" />
+                    </font>
+                </Label>
+                <Button id="addClothesButton" layoutX="154.0" layoutY="157.0" mnemonicParsing="false" onAction="#clickAddClothesButton" text="Add clothes">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="24.0" />
+                    </font>
+                </Button>
+                <Button id="deleteClothesButton" layoutX="142.0" layoutY="230.0" mnemonicParsing="false" onAction="#clickDeleteClothesButton" text="Delete clothes">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="24.0" />
+                    </font>
+                </Button>
+                <Button id="chooseLookButton" layoutX="107.0" layoutY="88.0" mnemonicParsing="false" onAction="#clickChooseClothesButton" text="Choose look of the day">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</GridPane>

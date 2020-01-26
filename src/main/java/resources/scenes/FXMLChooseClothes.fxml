@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<GridPane alignment="center" hgap="10" prefHeight="700.0" prefWidth="1000.0" vgap="10"
+          xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="controllers.frontend.FXMLChooseLookForDay">
+    <columnConstraints>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="700.0" prefWidth="1000.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="14.0" prefHeight="72.0"
+                       prefWidth="567.0" text="Choose look for the day" textAlignment="CENTER">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="58.0"/>
+                    </font>
+                </Label>
+                <Button id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false"
+                        onAction="#clickBackButton" text="Back">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="24.0"/>
+                    </font>
+                </Button>
+                <Label layoutX="291.0" layoutY="134.0" text="Temperature for today">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="24.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="temperature" id="temperature" layoutX="586.0" layoutY="129.0" prefHeight="40.0"
+                           prefWidth="100.0">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="20.0"/>
+                    </font>
+                </TextField>
+                <Button layoutX="876.0" layoutY="127.0" mnemonicParsing="false"
+                        onAction="#clickChooseButton" text="Choose">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="24.0"/>
+                    </font>
+                </Button>
+                <HBox layoutX="5.0" layoutY="212.0" prefHeight="482.0" prefWidth="989.0">
+                    <children>
+                        <ListView fx:id="firstLookList" prefHeight="482.0" prefWidth="733.0"/>
+                        <ListView fx:id="secondLookList" prefHeight="482.0" prefWidth="732.0"/>
+                    </children>
+                </HBox>
+            </children>
+        </Pane>
+    </children>
+</GridPane>

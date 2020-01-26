@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="700.0" prefWidth="1000.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.frontend.FXMLDeleteClothesController">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="700.0" prefWidth="1000.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="327.0" layoutY="5.0" prefHeight="42.0" prefWidth="347.0" text="Delete clothes" textAlignment="CENTER">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="58.0" />
+                    </font>
+                </Label>
+                <Button id="deleteClothesButton" layoutX="896.0" layoutY="93.0" mnemonicParsing="false" text="Delete" onAction="#clickDeleteButton">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="24.0" />
+                    </font>
+                </Button>
+                <Label layoutX="16.0" layoutY="101.0" text="Category">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="22.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="pants" layoutX="106.0" layoutY="103.0" mnemonicParsing="false" selected="true" text="Pants">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="category" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="skirt" layoutX="194.0" layoutY="103.0" mnemonicParsing="false" text="Skirt" toggleGroup="$category">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="dress" layoutX="275.0" layoutY="103.0" mnemonicParsing="false" text="Dress" toggleGroup="$category">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="shirt" layoutX="360.0" layoutY="103.0" mnemonicParsing="false" text="Shirt" toggleGroup="$category">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="jumper" layoutX="442.0" layoutY="102.0" mnemonicParsing="false" text="Jumper" toggleGroup="$category">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="outerwear" layoutX="550.0" layoutY="103.0" mnemonicParsing="false" text="Outerwear" toggleGroup="$category">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                    </font>
+                </RadioButton>
+                <Label layoutX="707.0" layoutY="102.0" text="ID">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="22.0" />
+                    </font>
+                </Label>
+                <TextField id="index" fx:id="index" layoutX="742.0" layoutY="96.0" prefHeight="40.0" prefWidth="100.0">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                    </font>
+                </TextField>
+                <Button id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickBackButton" text="Back">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="24.0" />
+                    </font>
+                </Button>
+                <Accordion layoutX="5.0" layoutY="148.0" prefHeight="548.0" prefWidth="990.0">
+                    <panes>
+                        <TitledPane id="pantsTab" animated="false" prefHeight="301.0" prefWidth="990.0" text="Pants">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="352.0" prefWidth="988.0">
+                           <children>
+                              <ListView fx:id="pantsListView" prefHeight="274.0" prefWidth="990.0" />
+                           </children>
+                                </AnchorPane>
+                            </content>
+                            <font>
+                                <Font name="Bernard MT Condensed" size="24.0" />
+                            </font>
+                        </TitledPane>
+                        <TitledPane id="skirtTab" animated="false" prefWidth="589.0" text="Skirts">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ListView fx:id="skirtListView" prefHeight="274.0" prefWidth="990.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                            <font>
+                                <Font name="Bernard MT Condensed" size="24.0" />
+                            </font>
+                        </TitledPane>
+                        <TitledPane id="dressTab" animated="false" text="Dresses">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ListView fx:id="dressListView" prefHeight="274.0" prefWidth="990.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                            <font>
+                                <Font name="Bernard MT Condensed" size="24.0" />
+                            </font>
+                        </TitledPane>
+                        <TitledPane id="shirtTab" animated="false" prefHeight="227.0" prefWidth="592.0" text="Shirts">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="590.0">
+                                    <children>
+                                        <ListView fx:id="shirtListView" prefHeight="274.0" prefWidth="990.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                            <font>
+                                <Font name="Bernard MT Condensed" size="24.0" />
+                            </font>
+                        </TitledPane>
+                        <TitledPane id="jumperTab" animated="false" prefHeight="227.0" prefWidth="592.0" text="Jumpers">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="590.0">
+                                    <children>
+                                        <ListView fx:id="jumperListView" prefHeight="274.0" prefWidth="990.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                            <font>
+                                <Font name="Bernard MT Condensed" size="24.0" />
+                            </font>
+                        </TitledPane>
+                        <TitledPane id="outerwearTab" animated="false" prefHeight="247.0" prefWidth="984.0" text="Outerwears">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="590.0">
+                                    <children>
+                                        <ListView fx:id="outerwearListView" prefHeight="274.0" prefWidth="990.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                            <font>
+                                <Font name="Bernard MT Condensed" size="24.0" />
+                            </font>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+
+            </children>
+        </Pane>
+    </children>
+</GridPane>
