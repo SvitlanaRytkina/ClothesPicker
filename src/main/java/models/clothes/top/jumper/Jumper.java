@@ -15,11 +15,8 @@ public class Jumper extends TopPartClothes {
     }
 
     public Jumper(int id, JumperType type, String color, List<Season> season, String comment) {
-        this.id = id;
+        super(id, color, season, comment);
         this.type = type;
-        this.color = color;
-        this.season = season;
-        this.comment = comment;
     }
 
     public JumperType getType() {
@@ -47,6 +44,6 @@ public class Jumper extends TopPartClothes {
 
     @Override
     public String toString() {
-        return String.format("%s - %s %s [%s] for %s", id, color, type.getType(), comment, getStringSeasons(season));
+        return String.format("%s - %s %s [%s] for %s", getId(), getColor(), type.getType(), getComment(), getStringSeasons(getSeason()));
     }
 }

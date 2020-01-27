@@ -16,12 +16,9 @@ public class Shirt extends TopPartClothes {
     }
 
     public Shirt(int id, ShirtType type, Material material, String color, List<Season> season, String comment) {
-        this.id = id;
+        super(id, color, season, comment);
         this.type = type;
         this.material = material;
-        this.color = color;
-        this.season = season;
-        this.comment = comment;
     }
 
     public ShirtType getType() {
@@ -56,6 +53,7 @@ public class Shirt extends TopPartClothes {
 
     @Override
     public String toString() {
-        return String.format("%s - %s %s %s [%s] for %s", id, color, material.getMaterial(), type.getType(), comment, getStringSeasons(season));
+        return String.format("%s - %s %s %s [%s] for %s", getId(), getColor(), material.getMaterial(), type.getType(),
+                getComment(), getStringSeasons(getSeason()));
     }
 }

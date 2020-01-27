@@ -6,10 +6,20 @@ import models.clothes.Season;
 import java.util.List;
 
 public abstract class TopPartClothes implements Clothes {
-    protected int id;
-    protected String color;
-    protected List<Season> season;
-    protected String comment;
+    private int id;
+    private String color;
+    private List<Season> season;
+    private String comment;
+
+    public TopPartClothes() {
+    }
+
+    public TopPartClothes(int id, String color, List<Season> season, String comment) {
+        this.id = id;
+        this.color = color;
+        this.season = season;
+        this.comment = comment;
+    }
 
     public int getId() {
         return id;

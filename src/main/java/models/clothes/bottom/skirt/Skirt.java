@@ -17,13 +17,10 @@ public class Skirt extends BottomPartClothes {
     }
 
     public Skirt(int id, SkirtType type, SkirtLength length, String color, boolean isWornWithTights, List<Season> season, String comment) {
-        this.id = id;
+        super(id, color, season, comment);
         this.type = type;
         this.length = length;
-        this.color = color;
         this.isWornWithTights = isWornWithTights;
-        this.season = season;
-        this.comment = comment;
     }
 
     public boolean choose(int temperature) {
@@ -64,7 +61,7 @@ public class Skirt extends BottomPartClothes {
 
     @Override
     public String toString() {
-        return String.format("%s - %s %s %s skirt worn with%s tights [%s] for %s", id, color, length.getLength(), type.getType(),
-                isWornWithTights ? " " : "out", comment, getStringSeasons(season));
+        return String.format("%s - %s %s %s skirt worn with%s tights [%s] for %s", getId(), getColor(), length.getLength(), type.getType(),
+                isWornWithTights ? " " : "out", getComment(), getStringSeasons(getSeason()));
     }
 }

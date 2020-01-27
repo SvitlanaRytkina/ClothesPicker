@@ -10,8 +10,8 @@ import java.util.Objects;
 import static controllers.backend.utils.CommonUtils.getStringSeasons;
 
 public class Dress implements Clothes {
-    protected int id;
-    protected String comment;
+    private int id;
+    private String comment;
     private String color;
     private List<Season> season;
     private SkirtLength length;
